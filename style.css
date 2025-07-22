@@ -1,0 +1,125 @@
+/* Base styles and fonts */
+body {
+  font-family: 'Inter', 'Fira Code', monospace;
+  background: linear-gradient(145deg, #1c1c1c, #111);
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Wrapper container */
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+/* Page headings */
+h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  margin-top: 40px;
+  color: #e0e0e0;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Form styling */
+form {
+  background-color: #1e1e1e;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+  margin-bottom: 40px;
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #bbbbbb;
+  font-size: 0.95rem;
+}
+
+/* Inputs and Textarea */
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #f5f5f5;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* Button styling */
+button {
+  background-color: #4c51bf;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background-color: #667eea;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  input[type="file"],
+  textarea,
+  button {
+    font-size: 15px;
+  }
+}
+
+/* Site Header & Logo */
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 10px;
+}
+
+.logo {
+  max-width: 160px;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+/* Slight spacing tweak to follow logo */
+.container {
+  margin-top: 10px;
+}
