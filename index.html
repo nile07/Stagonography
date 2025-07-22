@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Steganography Web App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png"> <!-- Favicon -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="logo.png" alt="Steganographer Logo" class="logo">
+  </header>
+
+  <div class="container">
+    <h1>🕵️ Hide a Secret Message</h1>
+    <form action="/encode" method="POST" enctype="multipart/form-data">
+      <label>Select Image</label>
+      <input type="file" name="image" required>
+      
+      <label>Secret Message</label>
+      <textarea name="message" placeholder="Enter your secret message" required></textarea>
+      
+      <button type="submit">Encode and Download</button>
+    </form>
+
+    <h1>🔍 Decode a Hidden Message</h1>
+    <form action="/decode" method="POST" enctype="multipart/form-data">
+      <label>Upload Stego Image</label>
+      <input type="file" name="stego_image" required>
+      
+      <button type="submit">Decode</button>
+    </form>
+  </div>
+
+</body>
+</html>
