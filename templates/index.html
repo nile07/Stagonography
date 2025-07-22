@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Steganography Web App</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="icon" type="image/png" href="logo.png"> <!-- Favicon -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
 </head>
@@ -16,22 +16,20 @@
   <div class="container">
     <h1>🕵️ Hide a Secret Message</h1>
     <form action="/encode" method="POST" enctype="multipart/form-data">
-      <label>Select Image</label>
-      <input type="file" name="image" required>
-      
-      <label>Secret Message</label>
-      <textarea name="message" placeholder="Enter your secret message" required></textarea>
-      
-      <button type="submit">Encode and Download</button>
-    </form>
+    <input type="file" name="image" required><br>
+    <textarea name="message" placeholder="Enter your secret message" required></textarea><br>
+    <input type="password" name="password" placeholder="Enter password" required><br>
+    <button type="submit">Encode</button>
+</form>
+
 
     <h1>🔍 Decode a Hidden Message</h1>
     <form action="/decode" method="POST" enctype="multipart/form-data">
-      <label>Upload Stego Image</label>
-      <input type="file" name="stego_image" required>
-      
-      <button type="submit">Decode</button>
-    </form>
+    <input type="file" name="stego_image" required><br>
+    <input type="password" name="password" placeholder="Enter password" required><br>
+    <button type="submit">Decode</button>
+</form>
+
   </div>
 
 </body>
